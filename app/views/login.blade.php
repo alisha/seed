@@ -7,20 +7,24 @@
 
 @section('content')
 
+	<h1>Login to the Seed's community</h1>
+
 	{{ Form::open(array('action' => 'UserController@loginUser')) }}
-
-		{{ Form::label('password', 'Password') }}
-		{{ Form::password('password') }}
-
-		<br>
-
-		{{ Form::checkbox('remember_me', '1') }}
-		{{ Form::label('remember_me', 'Remember me') }}
-
-		<br>
-
-		{{ Form::submit('Log me in!') }}
-
+		<h4>Seed uses your device as a username, all you need to remember is your password.</h4>
+		<div class="form-group">
+		    <label for="password">Password:</label>
+		    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+	    </div>
+	    <div class="form-group">
+		    <div class="checkbox">
+			    <label>
+			      <input name="remember_me" type="checkbox"> Remember me
+			    </label>
+		  	</div>
+	  	</div>
+	  	<div class="form-group">
+		  	<button type="submit" class="btn btn-default">Login</button>
+	  	</div>
 	{{ Form::close() }}
 
 	<p>Not a member? <a href="/signup">Sign up today!</a></p>
