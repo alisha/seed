@@ -7,7 +7,7 @@
 
 @section('content')
 
-	<h1>{{ $board->name }}</h1>
+	<h1>{{ $board->name }} - Message Board</h1>
 
 	@foreach ($board->message()->get() as $message)
 

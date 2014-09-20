@@ -7,22 +7,21 @@
 
 @section('content')
 
-	<div class="row">
-		<div class="col-md-6">Name</div>
-		<div class="col-md-6">Last Reply</div>
+	<h1>All Message Boards</h1>
+
+	<table class="table table-striped">
+		<tr>
+			<td><b>Name</b></td>
+			<td><b>Last Reply</b></td>
+		</tr>
 
 		@foreach($boards as $board)
-
-			<div class="col-md-6">
-				{{ $board->name }}
-			</div>
-
-			<div class="col-md-6">
-				{{--{{ date('n/j/y g:i a e', strtotime($board->mostRecentPostDate())) }}--}} 
-				by {{ $board->mostRecentAuthor() }}
-			</div>
-
+			<tr>
+				<td><a href="/boards/{{$board->id}}">{{ $board->name }}</a></td>
+				<td>{{ date('n/j/y g:i a e', strtotime($board->mostRecentPostDate())) }} by {{ $board->mostRecentAuthor() }}</td>
+			</tr>
 		@endforeach
-	</div>
+
+	</table>
 
 @stop
