@@ -12,9 +12,12 @@
 */
 
 Route::get('/', function() {
-	return View::make('hello');
+	return View::make('index');
 });
 
+/* User functions */
+
+// Show form to create new user
 Route::get('/signup', function() {
 	if (!Auth::check()) {
 		return View::make('signup');
@@ -23,8 +26,10 @@ Route::get('/signup', function() {
 	}
 });
 
+// Handle form to create new user
 Route::post('/signup', 'UserController@createUser');
 
+// Log in a user
 Route::get('/login', function() {
 	if (!Auth::check()) {
 		return View::make('login');
@@ -33,8 +38,10 @@ Route::get('/login', function() {
 	}
 });
 
+// Handle log in data
 Route::post('/login', 'UserController@loginUser');
 
+// Log out a user
 Route::get('/logout', function() {
 	if (Auth::check()) {
 		Auth::logout();
@@ -45,6 +52,7 @@ Route::get('/logout', function() {
 	}
 });
 
+// Show a user their profile
 Route::get('/me', 
 	array(
 		'before' => 'auth',
@@ -54,3 +62,30 @@ Route::get('/me',
 		}
 	)
 );
+
+// Show the form for a user to edit their profile
+Route::get('/me/edit',
+	array(
+		'before' => 'auth',
+		function() {
+			return View::make('editUser')
+				->with('user', Auth::user());
+		}
+	)
+);
+
+// Handle the form for a user to edit their information
+Route::post('/me/edit', 'UserController@updateUser');
+
+/* Board functions */
+
+Route::group(array('before' => 'auth'), function() {
+
+	Route::post('boards/{id}', 'BoardController@reply');
+	Route::resource('boards', 'BoardController');
+
+});
+
+Route::get('/test', function() {
+	var_dump(Board::findOrFail(1)->message()->get()->last());
+});

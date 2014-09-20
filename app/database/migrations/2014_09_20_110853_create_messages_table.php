@@ -18,6 +18,7 @@ class CreateMessagesTable extends Migration {
 			$table->foreign('board_id')->references('id')->on('boards');
 			$table->integer('user_id')->unsigned();
 			$table->foreign('user_id')->references('id')->on('users');
+			$table->timestamps();
 		});
 	}
 

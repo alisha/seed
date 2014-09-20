@@ -6,4 +6,12 @@ class Board extends Eloquent {
 		return $this->hasMany('Message');
 	}
 
+	public function mostRecentAuthor() {
+		return $this->message()->last()->user()->name;
+	}
+
+	/*public function mostRecentPostDate() {
+		return $this->message()->last()->created_at;
+	}*/
+
 }

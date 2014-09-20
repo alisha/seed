@@ -32,14 +32,13 @@ class UserController extends BaseController {
 	public function loginUser() {
 		//Validation
 		$rules = array(
-			'name' => 'required',
 			'password' => 'required'
 		);
 
 		$validator = Validator::make(Input::all(), $rules);
 
 		if ($validator->fails()) {
-			return Redirect::to('/signup')
+			return Redirect::to('/login')
 				->withInput()
 				->withErrors($validator);
 		}
@@ -53,6 +52,43 @@ class UserController extends BaseController {
 				->with('alert_class', 'alert-danger')
 				->withInput();
 		}
+	}
+
+	public function updateUser() {
+		//Validation
+		$rules = array(
+			'name' => 'required',
+			'current_password' => 'required_with:new_password',
+			'new_password' => 'required_with:current_password'
+		);
+
+		$validator = Validator::make(Input::all(), $rules);
+
+		if ($validator->fails()) {
+			return Redirect::to('/me/edit')
+				->withInput()
+				->withErrors($validator);
+		}
+
+		$user = Auth::user();
+		$user->name = Input::get('name');
+
+		if (Input::get('current_password') != "") {
+			if (Hash::check(Input::get('current_password'), $user->password)) {
+				$user->password = Hash::make(Input::get('new_password'));
+			} else {
+				return Redirect::to('/me/edit')
+					->withInput()
+					->with('flash_message', 'Your current password doesn\'t match your actual password. Try again?')
+					->with('alert_class', 'alert-danger');
+			}
+		}
+
+		$user->save();
+
+		return Redirect::to('/me')
+			->with('flash_message', 'Your information has been successfully updated!')
+			->with('alert_class', 'alert-success');
 	}
 
 }
