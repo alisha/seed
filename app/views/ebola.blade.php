@@ -7,15 +7,15 @@
 
 @section('content')
 	<div class="alert alert-danger" role="alert">
-		<h2>Important Information about the Ebola Outbreak</h2>
+		<h3>Important Information about the Ebola Outbreak</h3>
 	</div>
 	<div>
-		<h4>Prevention</h4>
-		<ul>
+		<h4>Three Steps to Prevention</h4>
+		<ol>
 	  		<li>Avoid the bodies of those who recently died of Ebola</li>
 	  		<li>Stay away from animals that can carry the virus, like bats and monkeys</li>
 	  		<li>Avoid contact with the body fluids of a visibly infected person</li>
-		</ul>
+		</ol>
 	</div>
 
 	<div>
@@ -47,5 +47,6 @@
 	  		<li>Don't handle bush meat</li>
 		</ul>
 	</div>
+	<div class="">Last updated Sept. 21, 2014</div>
 	
 @stop
