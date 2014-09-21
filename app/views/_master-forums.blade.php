@@ -31,7 +31,8 @@
 			@endforeach
 		@endif
 
-	  <nav class="navbar navbar-default" role="navigation">
+	  <nav class="navbar navbar" role="navigation">
+		 <nav class="navbar navbar-inverse" role="navigation">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -40,19 +41,23 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="/">
-		      	<span class="glyphicon glyphicon-leaf"></span>
-		      	<span>Project Seed</span>
+		      <a class="navbar-brand" href="forum.html">
+		      	<span class="glyphicon glyphicon-bullhorn"></span>
+		      	<span>Seed Community</span>
 		      </a>
 		    </div>
 
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse">
 		      <ul class="nav navbar-nav">
-		      	 <li><a href="/">Info</a></li>
-		        <li><a href="/tools">Tools</a></li>
-		        <li><a href="/login">Community</a></li>
-		    	</ul>
+		      	<li><a href="index.html">Project Seed Home</a></li>
+		        <li class="active"><a href="#">Message Boards</a></li>
+		        <li><a href="#">Chat Groups</a></li>
+	         	<li><a href="#">Profile</a></li>
+		     </ul>
+		     <ul class="nav navbar-nav navbar-right">
+		        <li><a href="forum.html">Logout</a></li>
+	  		</ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>
