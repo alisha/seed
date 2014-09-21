@@ -15,6 +15,12 @@ Route::get('/', function() {
 	return View::make('index');
 });
 
+/* Resources functions */
+
+Route::get('/tools', function() {
+	return View::make('tools');
+});
+
 /* User functions */
 
 // Show form to create new user
