@@ -35,7 +35,7 @@ Route::get('/ebolaSpread', function() {
 
 /* User functions */
 
-Route::group(['prefix' => 'community'], function() {
+Route::group(['prefix' => '/community'], function() {
 
 	// Show form to create new user
 	Route::get('/signup', function() {

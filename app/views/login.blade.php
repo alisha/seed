@@ -29,7 +29,7 @@
 	  	</div>
 	{{ Form::close() }}
 
-	<p>Not a member? <a href="/signup">Sign up today!</a></p>
+	<p>Not a member? <a href="/community/signup">Sign up today!</a></p>
 @stop
 
 @section('navbar_lis')
