@@ -29,25 +29,16 @@
 
 	{{ Form::open(array('url' => '/boards/'.$board->id)) }}
 	<h4>Add Message</h4>
-		<div class="form-group">
-			<label for="message">Your Message:</label>
-		    <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-	    </div>
-	    <div class="form-group">
-		    <label for="message">Topic:</label>
-		    <input type="textarea" class="form-control" name="message" id="message">
+	  	<div class="form-group">
+			{{ Form::label('message', 'Your message:') }}
+			{{ Form::textarea('message') }}
 		</div>
-		<div class="form-group">
-		  	<button type="submit" class="btn btn-default">Create</button>
-	  	</div>
-
-
-		{{ Form::label('message', 'Your message:') }}
-		{{ Form::textarea('message') }}
 
 		<br>
 
-		{{ Form::submit('Send!') }}
+		<div class="form-group">
+		  	<button type="submit" class="btn btn-default">Send!</button>
+	  	</div>
 
 	{{ Form::close() }}
 
