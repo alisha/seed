@@ -9,8 +9,10 @@
 
 	<h1>Login to the Seed's community</h1>
 
+	<h4>Seed uses your device as a username, all you need to remember is your password.</h4>
+	<br>
+
 	{{ Form::open(array('action' => 'UserController@loginUser')) }}
-		<h4>Seed uses your device as a username, all you need to remember is your password.</h4>
 		<div class="form-group">
 		    <label for="password">Password:</label>
 		    <input type="password" class="form-control" name="password" id="password" placeholder="Password">

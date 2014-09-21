@@ -9,9 +9,10 @@
 
 	<h1>Sign up</h1>
 
-	{{ Form::open(array('action' => 'UserController@createUser')) }}
+	<h4>Seed will automatically detect your device and allow you to sign in. Please add a password for a secure connection</h4>
+	<br>
 
-		<h4>Seed will automatically detect your device and allow you to sign in. Please add a password for a secure connection</h4>
+	{{ Form::open(array('action' => 'UserController@createUser')) }}
 		<div class="form-group">
 			<label for="name">Name:</label>
 		    <input type="text" class="form-control" name="name" id="name" placeholder="Name">

@@ -9,8 +9,10 @@
 
 	<h1>Create a New Message Board</h1>
 
-	{{ Form::open(array('action' => 'BoardController@store')) }}
 	<h4>Boards allow you to have public conversations with other Seed users</h4>
+	<br>
+
+	{{ Form::open(array('action' => 'BoardController@store')) }}
 		<div class="form-group">
 			<label for="name">Name of the Board:</label>
 		    <input type="text" class="form-control" name="name" id="name">

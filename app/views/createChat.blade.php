@@ -15,46 +15,32 @@
 	{{ Form::open(array('route' => 'chats.store', 'class' => 'form-horizontal')) }}
 
 		<div class="form-group">
-			<div class="col-sm-2">
-				{{ Form::label('users[]', 'Users:') }} <br>
-				<span class="help-block">Hold the command button and click on a name to select multiple people</span>
-			</div>
-
-			<div class="col-sm-10">
-				<select name="users[]" class="form-control" multiple>
-					@foreach (User::all() as $user)
-						@if ($user->id != Auth::user()->id)
-							<option value="{{$user->id}}">{{$user->name}}</option>
-						@endif
-					@endforeach
-				</select>
-			</div>
+			{{ Form::label('users[]', 'Users:') }} <br>
+			<span class="help-block">Hold the command button and click on a name to select multiple people</span>
+			
+			<select name="users[]" class="form-control" multiple>
+				@foreach (User::all() as $user)
+					@if ($user->id != Auth::user()->id)
+						<option value="{{$user->id}}">{{$user->name}}</option>
+					@endif
+				@endforeach
+			</select>
 		</div>
 
 		<div class="form-group">
-			<div class="col-sm-2">
-				{{ Form::label('subject', 'Subject:') }}
-			</div>
-
-			<div class="col-sm-10">
-				{{ Form::text('subject', '', array('class' => 'form-control', 'placeholder' => 'Subject')) }}
-			</div>
+			{{ Form::label('subject', 'Subject:') }}
+			
+			{{ Form::text('subject', '', array('class' => 'form-control')) }}
 		</div>
 
 		<div class="form-group">
-			<div class="col-sm-2">
-				{{ Form::label('text', 'Message:') }}
-			</div>
-
-			<div class="col-sm-10">
-				{{ Form::textarea('text', '', array('class' => 'form-control', 'placeholder' => 'Message')) }}
-			</div>
+			{{ Form::label('text', 'Message:') }}
+			
+			{{ Form::textarea('text', '', array('class' => 'form-control')) }}
 		</div>
 
 		<div class="form-group">
-			<div class="col-sm-offset-2 col-sm-10">
-				{{ Form::submit('Send!', array('class' => 'btn btn-primary')) }}
-			</div>
+			{{ Form::submit('Send!', array('class' => 'btn btn-primary')) }}
 		</div>
 
 	{{ Form::close() }}
