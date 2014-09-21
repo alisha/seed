@@ -21,10 +21,7 @@
 		@endforeach
 	@endif
 
-	{{-- Add button --}}
-	{{ Form::open(array('route' => 'chats.create', 'method' => 'get')) }}
-		<button class="btn btn-primary" href="/courses/create">New chat</button>
-	{{ Form::close() }}
+	<p><a href="/community/chats/create">Create a new chat</a></p>
 @stop
 
 @section('navbar_lis')

@@ -12,7 +12,7 @@
 
 	<br>
 
-	{{ Form::open(array('route' => 'chats.store', 'class' => 'form-horizontal')) }}
+	{{ Form::open(array('action' => 'ChatController@store', 'class' => 'form-horizontal')) }}
 
 		<div class="form-group">
 			{{ Form::label('users[]', 'Users:') }} <br>
