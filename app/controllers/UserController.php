@@ -13,13 +13,13 @@ class UserController extends BaseController {
 		$validator = Validator::make(Input::all(), $rules);
 
 		if ($validator->fails()) {
-			return Redirect::to('/signup')
+			return Redirect::to('/community/signup')
 				->withInput()
 				->withErrors($validator);
 		}
 
 		if (count(User::where('ip', '=', $_SERVER['REMOTE_ADDR'])->get()) > 0) {
-			return Redirect::to('/signup')
+			return Redirect::to('/community/signup')
 				->withInput()
 				->with('flash_message', 'Your IP address is already registered with Seed. Have you forgotten your password?')
 				->with('alert_class', 'alert-danger');
