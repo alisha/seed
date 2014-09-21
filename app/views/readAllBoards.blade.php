@@ -7,7 +7,7 @@
 
 @section('content')
 
-	<h1>All Message Boards</h1>
+	<h1>All Message Boards <small><a href="/boards/create">Create one!</a></small></h1>
 
 	<table class="table table-striped">
 		<tr>

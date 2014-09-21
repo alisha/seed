@@ -13,7 +13,7 @@
 	<h4>Boards allow you to have public conversations with other Seed users</h4>
 		<div class="form-group">
 			<label for="name">Name of the Board:</label>
-		    <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+		    <input type="text" class="form-control" name="name" id="name">
 	    </div>
 	    <div class="form-group">
 		    <label for="message">Topic:</label>
