@@ -28,7 +28,7 @@
 @stop
 
 @section('navbar_lis')
-	<li><a href="/community/">Project Seed Home</a></li>
+	<li><a href="/">Project Seed Home</a></li>
 	<li><a href="/community/boards">Message Boards</a></li>
 	<li class="active"><a href="/community/chats">Chat Groups</a></li>
 	<li><a href="/community/me">Profile</a></li>
