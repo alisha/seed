@@ -13,3 +13,10 @@
 	Project Seed was created to provide areas with little-to-no upstream internet connect to features usually only availible to those with a web connection. We believe that technology can be an aide to increasing the well being of everyone, including the 3+ billion people around the world that current lack a connection. Seeds are portable and inexpense, meaning they can be deployed in environments where traditional communication infrastructure has failed.
 	</p>
 @stop
+
+@section('navbar_lis')
+	<li class="active"><a href="/">Information</a></li>
+	<li><a href="/health">Health / Safety</a></li>
+	<li><a href="/tools">Tools</a></li>
+	<li><a href="/login">Community</a></li>
+@stop
