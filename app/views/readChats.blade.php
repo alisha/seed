@@ -11,7 +11,7 @@
 		<p>You don't have any chats!</p>
 	@else
 		@foreach ($chats as $chat)
-			<p><a href="/chats/{{$chat->id}}"><b>{{ $chat->subject }}</b> ({{ $chat->numberOfUnreadReplies() }})</a><br>With:
+			<p><a href="/community/chats/{{$chat->id}}"><b>{{ $chat->subject }}</b> ({{ $chat->numberOfUnreadReplies() }})</a><br>With:
 				{{-- Display users in the chat --}}
 				@for ($index = 0; $index < count($chat->getOtherUsers()); $index++)
 					{{ $chat->getOtherUsers()[$index]->name }} @if($index != count($chat->getOtherUsers()) - 1)@if ($index == count($chat->getOtherUsers()) - 2)@if (count($chat->getOtherUsers()) > 2), and @else and @endif @else, @endif @endif
