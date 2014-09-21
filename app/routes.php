@@ -20,9 +20,18 @@ Route::get('/tools', function() {
 	return View::make('tools');
 });
 
-Route::get('/ebola', function() {
-	return View::make('ebola');
+Route::get('/health', function() {
+	return View::make('health');
 });
+
+Route::get('/heathTips', function() {
+	return View::make('heathTips');
+});
+
+Route::get('/ebolaSpread', function() {
+	return View::make('ebolaSpread');
+});
+
 
 /* User functions */
 

@@ -52,9 +52,9 @@
 		    <div class="collapse navbar-collapse">
 		      <ul class="nav navbar-nav">
 		      	@section('navbar_lis')
-  					<li><a href="/">Info</a></li>
+  					<li><a href="/">Information</a></li>
+  					<li><a href="/health">Health / Safety</a></li>
 		        	<li><a href="/tools">Tools</a></li>
-		        	
 		        	<li><a href="/login">Community</a></li>
 		        @show
 		    	</ul>
@@ -64,6 +64,21 @@
 		<div class="container">
 			@yield('content')
 		</div>
+		<div class="text-center">
+		<hr>
+		<span class="glyphicon glyphicon-tree-conifer"></span>
+		<span class="glyphicon glyphicon-tree-deciduous"></span>
+		<span class="glyphicon glyphicon-tree-conifer"></span>
+		<span class="glyphicon glyphicon-tree-deciduous"></span>
+		<span class="glyphicon glyphicon-tree-conifer"></span>
+		<span class="glyphicon glyphicon-tree-deciduous"></span>
+		<span class="glyphicon glyphicon-tree-conifer"></span>
+		<span class="glyphicon glyphicon-tree-deciduous"></span>
+		<span class="glyphicon glyphicon-tree-conifer"></span>
+		<span class="glyphicon glyphicon-tree-deciduous"></span>
+		<span class="glyphicon glyphicon-tree-conifer"></span>
+		<hr>
+	</div>
     <script type="text/javascript" src="{{ asset('resources/js/libs/jquery-1.11.1.min.js') }}"></script>
     <script src="{{ asset('resources/js/libs/bootstrap.min.js') }}"></script>
   </body>
