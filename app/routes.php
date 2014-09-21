@@ -24,8 +24,8 @@ Route::get('/health', function() {
 	return View::make('health');
 });
 
-Route::get('/heathTips', function() {
-	return View::make('heathTips');
+Route::get('/healthTips', function() {
+	return View::make('healthTips');
 });
 
 Route::get('/ebolaSpread', function() {

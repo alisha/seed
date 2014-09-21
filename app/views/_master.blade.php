@@ -40,7 +40,7 @@
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="/">
+		      <a class="navbar-brand" href="/login">
 		      	@section('brand')
 			      	<span class="glyphicon glyphicon-leaf"></span>
 			      	<span>Project Seed</span>

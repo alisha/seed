@@ -46,3 +46,10 @@
   		</a>
 	</div>
 @stop
+
+@section('navbar_lis')
+	<li><a href="/">Information</a></li>
+	<li><a href="/health">Health / Safety</a></li>
+	<li class="active"><a href="/tools">Tools</a></li>
+	<li><a href="/login">Community</a></li>
+@stop
