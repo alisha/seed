@@ -100,3 +100,7 @@ Route::group(array('before' => 'auth'), function() {
 Route::get('/test', function() {
 	var_dump(Board::findOrFail(1)->message()->get()->last());
 });
+
+Route::get('/info', function() {
+	phpinfo();
+});
