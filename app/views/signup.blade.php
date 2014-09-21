@@ -1,4 +1,4 @@
-@extends('_master')
+@extends('_master-forums')
 
 @section('title')
 	@parent
@@ -27,7 +27,8 @@
 	{{ Form::close() }}
 @stop
 
-@section('logged_out_links')
+@section('navbar_lis')
+	<li><a href="/">Project Seed Home</a></li>
   	<li class="active"><a href="/signup">Sign Up</a></li>
   	<li><a href="/login">Log in</a></li>
 @stop

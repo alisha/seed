@@ -31,7 +31,7 @@
 			@endforeach
 		@endif
 
-	  <nav class="navbar navbar-default" role="navigation">
+		<nav class="navbar @section('navbar_class') navbar-default @show" role="navigation">
 		  <div class="container-fluid">
 		    <div class="navbar-header">
 		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
@@ -49,9 +49,11 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse">
 		      <ul class="nav navbar-nav">
-		      	 <li><a href="/">Info</a></li>
-		        <li><a href="/tools">Tools</a></li>
-		        <li><a href="/login">Community</a></li>
+		      	@section('navbar_lis')
+	  					<li><a href="/">Info</a></li>
+		        	<li><a href="/tools">Tools</a></li>
+		        	<li><a href="/login">Community</a></li>
+		        @show
 		    	</ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->

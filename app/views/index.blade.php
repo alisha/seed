@@ -1,4 +1,4 @@
-@extends('_master')
+@extends('_master-forums')
 
 @section('content')
 

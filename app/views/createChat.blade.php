@@ -1,4 +1,4 @@
-@extends('_master')
+@extends('_master-forums')
 
 @section('title')
 	@parent
@@ -46,9 +46,10 @@
 	{{ Form::close() }}
 @stop
 
-@section('logged_in_links')
+@section('navbar_lis')
+	<li><a href="/">Project Seed Home</a></li>
 	<li><a href="/boards">Message Boards</a></li>
-	<li class="active"><a href="/chats">Group Chats</a></li>
-	<li><a href="/me">Your Profile</a></li>
-	<li><a href="/logout">Logout</a></li>
+	<li class="active"><a href="/chats">Chat Groups</a></li>
+	<li><a href="/me">Profile</a></li>
+	<li><a href="/logout">Log out</a></li>
 @stop
