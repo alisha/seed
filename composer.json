@@ -4,8 +4,7 @@
 	"keywords": ["framework", "laravel"],
 	"license": "MIT",
 	"require": {
-		"laravel/framework": "4.2.*",
-		"barryvdh/laravel-debugbar": "1.7.*@dev"
+		"laravel/framework": "4.2.*"
 	},
 	"autoload": {
 		"classmap": [

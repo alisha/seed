@@ -14,6 +14,5 @@ return array(
 	*/
 
 	'debug' => true,
-	'app.debug' => true,
 
 );
