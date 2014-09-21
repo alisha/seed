@@ -104,7 +104,7 @@ Route::group(['prefix' => '/community'], function() {
 		Route::post('boards/{id}', 'BoardController@reply');
 		Route::resource('boards', 'BoardController');
 
-		Route::post('chats/{id}', 'ChatController@reply');
+		Route::post('/community/chats/{id}', 'ChatController@reply');
 		Route::resource('chats', 'ChatController');
 	});
 
