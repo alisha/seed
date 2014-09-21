@@ -2,20 +2,20 @@
 
 @section('title')
 	@parent
-	 Log In
+	 - Log In
 @stop
 
 @section('content')
 
 	<h1>Login to the Seed's community</h1>
 
-	<h4>Seed uses your device as a username, all you need to remember is your password.</h4>
+	<h4>Seed uses your device as a username, so all you need to remember is your password.</h4>
 	<br>
 
 	{{ Form::open(array('action' => 'UserController@loginUser')) }}
 		<div class="form-group">
 		    <label for="password">Password:</label>
-		    <input type="password" class="form-control" name="password" id="password" placeholder="Password">
+		    <input type="password" class="form-control" name="password" id="password">
 	    </div>
 	    <div class="form-group">
 		    <div class="checkbox">
