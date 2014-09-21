@@ -7,7 +7,7 @@
 
 @section('content')
 
-	<h1>All Message Boards <small><a href="/boards/create">Create one!</a></small></h1>
+	<h1>All Message Boards <small><a href="/community/boards/create">Create one!</a></small></h1>
 
 	<table class="table table-striped">
 		<tr>
@@ -17,7 +17,7 @@
 
 		@foreach($boards as $board)
 			<tr>
-				<td><a href="/boards/{{$board->id}}">{{ $board->name }}</a></td>
+				<td><a href="/community/boards/{{$board->id}}">{{ $board->name }}</a></td>
 				<td>{{ date('n/j/y g:i a e', strtotime($board->mostRecentPostDate())) }} by {{ $board->mostRecentAuthor() }}</td>
 			</tr>
 		@endforeach
