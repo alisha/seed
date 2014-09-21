@@ -18,6 +18,7 @@
 		</ol>
 	</div>
 
+	<hr>
 	<div>
 		<h4>Symptoms</h4>
 		<ul>
@@ -38,7 +39,7 @@
   			</ul>
 		</ul>
 	</div>
-
+	<hr>
 	<div>
 		<h4>Protection</h4>
 		<ul>
