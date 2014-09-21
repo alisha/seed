@@ -11,13 +11,13 @@
 		<div class="list-group-header">
 		    <h3 class="list-group-item-title">M.I.T. Open Courseware</h3>
 		</div>
-		<a href="/var/www/seed/hdd/data/mit1/contents/Syllabus/index.htm" target="_blank" class="list-group-item">
+		<a href="/var/www/seed/public/hdd/data/mit1/contents/Syllabus/index.htm" target="_blank" class="list-group-item">
 		    <h4 class="list-group-item-title">Introduction to Computer Science and Programming</h4>
   		</a>
-  		<a href="/var/www/seed/hdd/data/mit2/contents/Syllabus/index.htm" target="_blank" class="list-group-item">
+  		<a href="/hdd/data/mit2/contents/Syllabus/index.htm" target="_blank" class="list-group-item">
 		    <h4 class="list-group-item-title">Introduction to Electrical Engineering and Computer Science I</h4>
   		</a>
-  		<a href="/var/www/seed/hdd/data/mit2/contents/Syllabus/index.htm" target="_blank" class="list-group-item">
+  		<a href="/public/hdd/data/mit3/contents/Syllabus/index.htm" target="_blank" class="list-group-item">
 		    <h4 class="list-group-item-title">Introduction to Computers and Engineering Problem Solving</h4>
   		</a>
 	</div>
