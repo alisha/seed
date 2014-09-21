@@ -63,7 +63,7 @@ class ChatController extends \BaseController {
 			$rules);
 
 		if ($validator->fails()) {
-			return Redirect::to('/chats/create')
+			return Redirect::to('/community/chats/create')
 				->withInput()
 				->withErrors($validator);
 		}
@@ -93,7 +93,7 @@ class ChatController extends \BaseController {
 		$notification->has_read = 1;
 		$notification->save();
 
-		return Redirect::to('/chats')
+		return Redirect::to('/community/chats')
 			->with('flash_chat', 'Your chat has been sent')
 			->with('alert_class', 'alert-success');
 	}
@@ -109,7 +109,7 @@ class ChatController extends \BaseController {
 		$chat = Chat::find($id);
 
 		if (!(isset($chat))) {
-			return Redirect::to('/chats')
+			return Redirect::to('/community/chats')
 				->with('flash_chat', 'That chat doesn\'t exist!')
 				->with('alert_class', 'alert-danger');
 		}
@@ -125,7 +125,7 @@ class ChatController extends \BaseController {
 		}
 
 		if (!$inArray) {
-			return Redirect::to('/chats')
+			return Redirect::to('/community/chats')
 				->with('flash_chat', 'You don\'t have permission to view this chat')
 				->with('alert_class', 'alert-danger');
 		}
@@ -175,7 +175,7 @@ class ChatController extends \BaseController {
 		$notification->has_read = 1;
 		$notification->save();		
 
-		return Redirect::to('/chats/'.$id)
+		return Redirect::to('/community/chats/'.$id)
 			->with('flash_chat', 'Your chat has been sent!')
 			->with('alert_class', 'alert-success');
 	}

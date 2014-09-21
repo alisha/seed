@@ -38,7 +38,7 @@ class BoardController extends \BaseController {
 		$validator = Validator::make(Input::all(), $rules);
 
 		if ($validator->fails()) {
-			return Redirect::to('/boards/create')
+			return Redirect::to('/community/boards/create')
 				->withInput()
 				->withErrors($validator);
 		}
@@ -53,7 +53,7 @@ class BoardController extends \BaseController {
 		$message->user_id = Auth::user()->id;
 		$message->save();
 
-		return Redirect::to('/boards/'.$board->id)
+		return Redirect::to('/community/boards/'.$board->id)
 			->with('flash_message', 'Your board has been successfully created!')
 			->with('alert_class', 'alert-success');
 	}
@@ -84,7 +84,7 @@ class BoardController extends \BaseController {
 		$validator = Validator::make(Input::all(), $rules);
 
 		if ($validator->fails()) {
-			return Redirect::to('/boards/create')
+			return Redirect::to('/community/boards/create')
 				->withInput()
 				->withErrors($validator);
 		}
@@ -95,7 +95,7 @@ class BoardController extends \BaseController {
 		$message->user_id = Auth::user()->id;
 		$message->save();
 
-		return Redirect::to('/boards/'.$id)
+		return Redirect::to('/community/boards/'.$id)
 			->with('flash_message', 'Your message has been sent!')
 			->with('alert_class', 'alert-success');
 	}

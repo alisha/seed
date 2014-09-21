@@ -25,10 +25,12 @@
 		  	<button type="submit" class="btn btn-default">Sign up</button>
 	  	</div>
 	{{ Form::close() }}
+
+	<p><a href="/community/login">Already have an account?</a></p>
 @stop
 
 @section('navbar_lis')
-	<li><a href="/">Project Seed Home</a></li>
-  	<li class="active"><a href="/signup">Sign Up</a></li>
-  	<li><a href="/login">Log in</a></li>
+	<li><a href="/community/">Project Seed Home</a></li>
+  	<li class="active"><a href="/community/signup">Sign Up</a></li>
+  	<li><a href="/community/login">Log in</a></li>
 @stop

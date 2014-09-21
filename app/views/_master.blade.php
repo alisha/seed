@@ -55,7 +55,7 @@
   					<li><a href="/">Information</a></li>
   					<li><a href="/health">Health / Safety</a></li>
 		        	<li><a href="/tools">Tools</a></li>
-		        	<li><a href="/login">Community</a></li>
+		        	<li><a href="/community/signup">Community</a></li>
 		        @show
 		    	</ul>
 		    </div><!-- /.navbar-collapse -->

@@ -4,7 +4,7 @@
 
 	<h1>Welcome to your local Seed</h1>
 	@if (Auth::check())
-		<p class="lead"></p>
+		<p class="lead">Connect with your community with <a href="/community/boards">message boards</a> and <a href="/community/chats">group chats</a>.</p>
 	@else
 		<p class="lead">Find educational resources like Wikipedia and MIT Courseware. <a href="/signup">Create an account</a> to connect with members of your community.</p>
 

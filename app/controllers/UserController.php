@@ -45,7 +45,7 @@ class UserController extends BaseController {
 		$validator = Validator::make(Input::all(), $rules);
 
 		if ($validator->fails()) {
-			return Redirect::to('/login')
+			return Redirect::to('/community/login')
 				->withInput()
 				->withErrors($validator);
 		}
@@ -54,7 +54,7 @@ class UserController extends BaseController {
 			return Redirect::intended('/')
 				->with('flash_message', 'Welcome back!');
 		} else {
-			return Redirect::to('/login')
+			return Redirect::to('/community/login')
 				->with('flash_message', 'That didn\'t seem to work - try again?')
 				->with('alert_class', 'alert-danger')
 				->withInput();
@@ -72,7 +72,7 @@ class UserController extends BaseController {
 		$validator = Validator::make(Input::all(), $rules);
 
 		if ($validator->fails()) {
-			return Redirect::to('/me/edit')
+			return Redirect::to('/community/me/edit')
 				->withInput()
 				->withErrors($validator);
 		}
@@ -84,7 +84,7 @@ class UserController extends BaseController {
 			if (Hash::check(Input::get('current_password'), $user->password)) {
 				$user->password = Hash::make(Input::get('new_password'));
 			} else {
-				return Redirect::to('/me/edit')
+				return Redirect::to('/community/me/edit')
 					->withInput()
 					->with('flash_message', 'Your current password doesn\'t match your actual password. Try again?')
 					->with('alert_class', 'alert-danger');
@@ -93,7 +93,7 @@ class UserController extends BaseController {
 
 		$user->save();
 
-		return Redirect::to('/me')
+		return Redirect::to('/community/me')
 			->with('flash_message', 'Your information has been successfully updated!')
 			->with('alert_class', 'alert-success');
 	}

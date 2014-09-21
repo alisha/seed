@@ -35,81 +35,80 @@ Route::get('/ebolaSpread', function() {
 
 /* User functions */
 
-// Show form to create new user
-Route::get('/signup', function() {
-	if (!Auth::check()) {
-		return View::make('signup');
-	} else {
-		return Redirect::to('/');
-	}
-});
+Route::group(['prefix' => 'community'], function() {
 
-// Handle form to create new user
-Route::post('/signup', 'UserController@createUser');
-
-// Log in a user
-Route::get('/login', function() {
-	if (!Auth::check()) {
-		return View::make('login');
-	} else {
-		return Redirect::to('/');
-	}
-});
-
-// Handle log in data
-Route::post('/login', 'UserController@loginUser');
-
-// Log out a user
-Route::get('/logout', function() {
-	if (Auth::check()) {
-		Auth::logout();
-		return Redirect::to('/')
-			->with('flash_message', 'You\'ve been logged out.');
-	} else {
-		return Redirect::to('/');
-	}
-});
-
-// Show a user their profile
-Route::get('/me', 
-	array(
-		'before' => 'auth',
-		function() {
-			return View::make('readUser')
-				->with('user', Auth::user());
+	// Show form to create new user
+	Route::get('/signup', function() {
+		if (!Auth::check()) {
+			return View::make('signup');
+		} else {
+			return Redirect::to('/');
 		}
-	)
-);
+	});
 
-// Show the form for a user to edit their profile
-Route::get('/me/edit',
-	array(
-		'before' => 'auth',
-		function() {
-			return View::make('editUser')
-				->with('user', Auth::user());
+	// Handle form to create new user
+	Route::post('/signup', 'UserController@createUser');
+
+	// Log in a user
+	Route::get('/login', function() {
+		if (!Auth::check()) {
+			return View::make('login');
+		} else {
+			return Redirect::to('/');
 		}
-	)
-);
+	});
 
-// Handle the form for a user to edit their information
-Route::post('/me/edit', 'UserController@updateUser');
+	// Handle log in data
+	Route::post('/login', 'UserController@loginUser');
 
-/* Board functions */
+	// Log out a user
+	Route::get('/logout', function() {
+		if (Auth::check()) {
+			Auth::logout();
+			return Redirect::to('/')
+				->with('flash_message', 'You\'ve been logged out.');
+		} else {
+			return Redirect::to('/');
+		}
+	});
 
-Route::group(array('before' => 'auth'), function() {
+	// Show a user their profile
+	Route::get('/me', 
+		array(
+			'before' => 'auth',
+			function() {
+				return View::make('readUser')
+					->with('user', Auth::user());
+			}
+		)
+	);
 
-	Route::post('boards/{id}', 'BoardController@reply');
-	Route::resource('boards', 'BoardController');
+	// Show the form for a user to edit their profile
+	Route::get('/me/edit',
+		array(
+			'before' => 'auth',
+			function() {
+				return View::make('editUser')
+					->with('user', Auth::user());
+			}
+		)
+	);
 
-	Route::post('chats/{id}', 'ChatController@reply');
-	Route::resource('chats', 'ChatController');
-});
+	// Handle the form for a user to edit their information
+	Route::post('/me/edit', 'UserController@updateUser');
 
-Route::get('/test', function() {
-	var_dump(Board::findOrFail(1)->message()->get()->last());
-});
+	/* Board functions */
 
-Route::get('/info', function() {
-	phpinfo();
+	Route::group(array('before' => 'auth'), function() {
+
+		Route::post('boards/{id}', 'BoardController@reply');
+		Route::resource('boards', 'BoardController');
+
+		Route::post('chats/{id}', 'ChatController@reply');
+		Route::resource('chats', 'ChatController');
+	});
+
+	Route::get('/test', function() {
+		var_dump(Board::findOrFail(1)->message()->get()->last());
+	});
 });
