@@ -50,15 +50,19 @@
 		    <div class="collapse navbar-collapse">
 		      <ul class="nav navbar-nav">
 		        @if (Auth::check())
-			        <li class="active"><a href="/boards">All Message Boards</a></li>
-			        <li><a href="/chats">All Group Chats</a></li>
-			        <li><a href="/me">Your Profile</a></li>
-			        <li><a href="/logout">Logout</a></li>
-			      @else
-              <li><a href="/signup">Sign Up</a></li>
-              <li><a href="/login">Log in</a></li>
+		        	@section('logged_in_links')
+				        <li><a href="/boards">Message Boards</a></li>
+				        <li><a href="/chats">Group Chats</a></li>
+				        <li><a href="/me">Your Profile</a></li>
+				        <li><a href="/logout">Logout</a></li>
+				    	@show
+			    	@else
+			    		@section('logged_out_links')
+              	<li><a href="/signup">Sign Up</a></li>
+              	<li><a href="/login">Log in</a></li>
+              @show
             @endif
-		     </ul>
+		    	</ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
 		</nav>

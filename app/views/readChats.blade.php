@@ -26,3 +26,10 @@
 		<button class="btn btn-primary" href="/courses/create">New chat</button>
 	{{ Form::close() }}
 @stop
+
+@section('logged_in_links')
+	<li><a href="/boards">Message Boards</a></li>
+	<li class="active"><a href="/chats">Group Chats</a></li>
+	<li><a href="/me">Your Profile</a></li>
+	<li><a href="/logout">Logout</a></li>
+@stop

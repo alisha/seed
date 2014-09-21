@@ -28,5 +28,9 @@
 	{{ Form::close() }}
 
 	<p>Not a member? <a href="/signup">Sign up today!</a></p>
+@stop
 
+@section('logged_out_links')
+  	<li><a href="/signup">Sign Up</a></li>
+  	<li class="active"><a href="/login">Log in</a></li>
 @stop

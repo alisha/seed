@@ -24,5 +24,9 @@
 		  	<button type="submit" class="btn btn-default">Sign up</button>
 	  	</div>
 	{{ Form::close() }}
+@stop
 
+@section('logged_out_links')
+  	<li class="active"><a href="/signup">Sign Up</a></li>
+  	<li><a href="/login">Log in</a></li>
 @stop
