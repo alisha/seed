@@ -41,8 +41,10 @@
 		        <span class="icon-bar"></span>
 		      </button>
 		      <a class="navbar-brand" href="/">
-		      	<span class="glyphicon glyphicon-leaf"></span>
-		      	<span>Project Seed</span>
+		      	@section('brand')
+			      	<span class="glyphicon glyphicon-leaf"></span>
+			      	<span>Project Seed</span>
+			    @show
 		      </a>
 		    </div>
 
@@ -50,8 +52,9 @@
 		    <div class="collapse navbar-collapse">
 		      <ul class="nav navbar-nav">
 		      	@section('navbar_lis')
-	  					<li><a href="/">Info</a></li>
+  					<li><a href="/">Info</a></li>
 		        	<li><a href="/tools">Tools</a></li>
+		        	
 		        	<li><a href="/login">Community</a></li>
 		        @show
 		    	</ul>
