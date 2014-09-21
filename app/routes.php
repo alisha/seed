@@ -112,3 +112,52 @@ Route::group(['prefix' => '/community'], function() {
 		var_dump(Board::findOrFail(1)->message()->get()->last());
 	});
 });
+
+Route::get('/seeder', function() {
+	$faker = Faker\Factory::create();
+
+	$user = new User;
+	$user->ip = "94.198.135.79";
+	$user->name = $faker->name;
+	$user->password = Hash::make('test');
+	$user->save();
+
+	$user = new User;
+	$user->ip = "94.228.204.10";
+	$user->name = $faker->name;
+	$user->password = Hash::make('test');
+	$user->save();
+
+	$user = new User;
+	$user->ip = "95.31.42.89";
+	$user->name = $faker->name;
+	$user->password = Hash::make('test');
+	$user->save();
+
+	$user = new User;
+	$user->ip = "188.134.76.66";
+	$user->name = $faker->name;
+	$user->password = Hash::make('test');
+	$user->save();
+
+});
+
+Route::get('/as1', function() {
+	$id = User::where('ip', '=', '94.198.135.79')->first()->id;
+	Auth::loginUsingId($id);
+});
+
+Route::get('/as2', function() {
+	$id = User::where('ip', '=', '94.228.204.10')->first()->id;
+	Auth::loginUsingId($id);
+});
+
+Route::get('/as3', function() {
+	$id = User::where('ip', '=', '5.31.42.89')->first()->id;
+	Auth::loginUsingId($id);
+});
+
+Route::get('/as4', function() {
+	$id = User::where('ip', '=', '188.134.76.66')->first()->id;
+	Auth::loginUsingId($id);
+});
