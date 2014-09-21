@@ -23,8 +23,21 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password', 'remember_token');
 
-	public function message() {
-		return $this->hasMany('Message');
+	public function chat() {
+		return $this->belongsToMany('Chat')
+			->orderBy('last_reply', 'desc');
+	}
+
+	public function reply() {
+		return $this->hasMany('Reply');
+	}
+
+	public function notification() {
+		return $this->belongsToMany('Reply', 'notifications');
+	}
+
+	public function numberOfUnreadMessages() {
+		return count(Notification::where('user_id', '=', $this->id)->where('has_read', '=', '0')->get());
 	}
 
 }

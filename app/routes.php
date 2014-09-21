@@ -84,6 +84,8 @@ Route::group(array('before' => 'auth'), function() {
 	Route::post('boards/{id}', 'BoardController@reply');
 	Route::resource('boards', 'BoardController');
 
+	Route::post('chats/{id}', 'ChatController@reply');
+	Route::resource('chats', 'ChatController');
 });
 
 Route::get('/test', function() {

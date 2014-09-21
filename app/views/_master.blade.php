@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>
-			@section('title')
-				Project Seed
-			@show
-		</title>
+		@section('title')
+			Project Seed
+		@show
+	</title>
     <link href="{{ asset('resources/css/libs/normalize.css') }}" rel="stylesheet">
     <link href="{{ asset('resources/css/libs/bootstrap.min.css') }}" rel="stylesheet">
   </head>
@@ -49,9 +49,15 @@
 		    <!-- Collect the nav links, forms, and other content for toggling -->
 		    <div class="collapse navbar-collapse">
 		      <ul class="nav navbar-nav">
-		        <li class="active"><a href="#">Info</a></li>
-		        <li><a href="#">Resources</a></li>
-		        <li><a href="login">Community</a></li>
+		        @if (Auth::check())
+			        <li class="active"><a href="/boards">All Message Boards</a></li>
+			        <li><a href="/chats">All Group Chats</a></li>
+			        <li><a href="/me">Your Profile</a></li>
+			        <li><a href="/logout">Logout</a></li>
+			      @else
+              <li><a href="/signup">Sign Up</a></li>
+              <li><a href="/login">Log in</a></li>
+            @endif
 		     </ul>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
