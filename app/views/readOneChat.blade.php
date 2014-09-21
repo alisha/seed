@@ -23,7 +23,7 @@
 	<br>
 
 	<h3>Reply:</h3>
-	{{ Form::open(array('url' => '/chats/'.$chat->id, 'class' => 'form')) }}
+	{{ Form::open(array('url' => '/community/chats/'.$chat->id, 'class' => 'form')) }}
 		<div class="form-group">
 			{{ Form::textarea('text', '', array('class' => 'form-control', 'placeholder' => 'Chat', 'rows' => '5')) }}
 		</div>
