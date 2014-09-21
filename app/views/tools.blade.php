@@ -2,7 +2,7 @@
 
 @section('title')
 	 @parent
-	 - Resources
+	 - Tools
 @stop
 
 @section('content')

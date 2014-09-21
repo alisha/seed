@@ -10,15 +10,18 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
+/* Static functions */
 
 Route::get('/', function() {
 	return View::make('index');
 });
 
-/* Resources functions */
-
 Route::get('/tools', function() {
 	return View::make('tools');
+});
+
+Route::get('/ebola', function() {
+	return View::make('ebola');
 });
 
 /* User functions */

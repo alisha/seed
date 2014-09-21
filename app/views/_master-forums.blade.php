@@ -4,6 +4,11 @@
 	navbar-inverse
 @stop
 
+@section('brand')
+	<span class="glyphicon glyphicon-bullhorn"></span>
+	<span>Seed Community</span>
+@stop
+
 @section('navbar_lis')
 	<li><a href="/">Project Seed Home</a></li>
 	@if (Auth::check())
