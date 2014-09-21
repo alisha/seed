@@ -9,7 +9,7 @@
 	<h1>Health / Safety</h1>
 	<div class="list-group">
 		<div class="alert alert-danger" role="alert">
-	  		<a href="/heathTips" class="alert-link">
+	  		<a href="/healthTips" class="alert-link">
 	  			<h4><span class="glyphicon glyphicon-exclamation-sign"></span> Tips for avoiding Ebola</h4>
 				<p>
 					Protect youself against Ebola; learn the symptoms and how to avoid getting infected.
