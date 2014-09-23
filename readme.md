@@ -1,7 +1,15 @@
 # Seed
 
 Installation:
+
+Download Raspberry Pi SD image (SD card must be 8GB or greater):
+
+https://www.dropbox.com/s/mjveylxftuaum8g/project_seed_rpi.dmg.zip?dl=0
+
+OR
+
 Follow the steps at the link below to configure a raspberry pi into a wifi access point. This will serve as a local offline server.
+
 https://learn.adafruit.com/setting-up-a-raspberry-pi-as-a-wifi-access-point/overview
 
 Then, mount an external hard disk on to the raspberry pi for storage.
