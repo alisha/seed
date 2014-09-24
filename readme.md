@@ -1,7 +1,17 @@
 # Seed
 
+Seed is an off grid web server configured as a wireless access point. Anyone within range (approx. 350 ft.) can access Seed on either their mobile or desktop computer. Seed is mounted with a TB of local storage filled with meaningful information for Wikipedia, MIT Open Courseware, 'Free the Children' PDF's and health information.
+
+Seed also hosts local applications as it's a full functioning LEMP server (Linux, Nginx, MySQL, PHP). Seed Chat is the first deployed application. It can be used as both a general public forum as well as an emergency communication tool during natural disasters.
 
 ## Installation:
+
+### Hardware Required:
+- Raspberry Pi
+- Long range wireless antenna
+- 10,000mAh Battery
+- 1TB External hard drive
+- Various other components required for initial configuration (keyboard, screen, etc)
 
 ### Install Seed on Raspberry Pi
 There are two ways to install seed on a raspberry pi:
