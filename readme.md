@@ -19,3 +19,8 @@ Finally download nginx, php, and larval as mentioned below.
 http://www.ducky-pond.com/posts/2013/Sep/setup-a-web-server-on-rpi/
 https://www.digitalocean.com/community/tutorials/how-to-install-laravel-with-nginx-on-an-ubuntu-12-04-lts-vps
 
+***
+You must run the following commands in the terminal upon reboot (we'll fix the daemon soon):
+
+sudo service hostapd start
+sudo service isc-dhcp-server start
