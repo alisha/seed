@@ -1,6 +1,6 @@
 # Seed
 
-Installation:
+## Installation:
 
 Download Raspberry Pi SD image (SD card must be 8GB or greater):
 
@@ -22,5 +22,7 @@ https://www.digitalocean.com/community/tutorials/how-to-install-laravel-with-ngi
 ***
 You must run the following commands in the terminal upon reboot (we'll fix the daemon soon):
 
+```
 sudo service hostapd start
 sudo service isc-dhcp-server start
+```
